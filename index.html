@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Burger Logger!</h1>
+
+<h2>Burger list</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+    <button class="change-devour" data-id="{{id}}" data-newdevoured="{{devour}}">
+		{{#if devour}}Eat me!{{else}}Devoured{{/if}}
+	</button>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that have been devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="name">
+  </div>
+
+  <button type="submit" id="submit">Add burger</button>
+</form>
+
+<script>
+    var submitVal = document.getElementById("submit")
+    console.log(submitVal.value)
+    console.log(req.body)
+</script>
+</body>
+</html>
