@@ -3,26 +3,19 @@ $(function () {
         event.preventDefault()
         var id = $(this).data("id");
 
-        var newDevouredState = {
-            devoured: 1
-        };
-
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: newDevouredState
+            type: "PUT"
         }).then(
-            function () {
-                console.log("You ate the burger!");
-                // Reload the page to get the updated list
-                location.reload();
-            }
+                location.reload()
         );
     });
 
     $(".create-burger").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
+        
         event.preventDefault();
+        // console.log("hello world")
 
         var newBurger = {
             burger_name: $("#burger").val().trim(),
@@ -34,7 +27,8 @@ $(function () {
             type: "POST",
             data: newBurger
         }).then(
-            function () {
+            function (result) {
+                console.log("result", result)
                 console.log("Burger up!");
                 // Reload the page to get the updated list
                 location.reload();

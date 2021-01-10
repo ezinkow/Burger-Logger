@@ -14,15 +14,15 @@ var orm = {
 
     insertOne: function(table, column, burgerName, cb){
         var query = "INSERT INTO ?? (??) VALUES (?)"
-        connection.query(query, [table, column, burgerName], function (err, result){
+        connection.query(query, [table, column.toString(), burgerName], function (err, result){
             if (err) throw err;
             cb(result)
         })
     },
 
-    updateOne: function(table, column, devoured, id, idNumber, cb){
-        var query = "UPDATE ?? SET ?? = ? WHERE ?? = ?"
-        connection.query(query, [table, column, devoured, id, idNumber], function (err, result){
+    updateOne: function(id, cb){
+        var query = "UPDATE burgers SET devoured = 1 WHERE id = ?"
+        connection.query(query, [id], function (err, result){
             if (err) throw err;
             cb(result)
         })

@@ -1,0 +1,17 @@
+h1 {
+    text-align: center
+}
+
+.create-burger, #add {
+    text-align: center
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+}

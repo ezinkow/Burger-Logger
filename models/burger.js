@@ -12,8 +12,8 @@ var burger = {
             cb(res)
         })
     },
-    updateOne: function (table, devoured, boolean, column, burgerName, cb) {
-        orm.updateOne("burgers", "devoured", "1", "burger_name", "hamburger", function (res) {
+    updateOne: function (id, cb) {
+        orm.updateOne(id, function (res) {
             cb(res)
         })
 
