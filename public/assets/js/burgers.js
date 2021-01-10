@@ -11,11 +11,8 @@ $(function () {
         );
     });
 
-    $(".create-burger").on("submit", function (event) {
-        // Make sure to preventDefault on a submit event.
-        
+    $(".create-burger").on("submit", function (event) {        
         event.preventDefault();
-        // console.log("hello world")
 
         var newBurger = {
             burger_name: $("#burger").val().trim(),
@@ -28,9 +25,7 @@ $(function () {
             data: newBurger
         }).then(
             function (result) {
-                console.log("result", result)
-                console.log("Burger up!");
-                // Reload the page to get the updated list
+                // Reload the page
                 location.reload();
             }
         );
