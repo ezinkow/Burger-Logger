@@ -1,6 +1,6 @@
 # BurgerLogger
 
-![image](https://user-images.githubusercontent.com/71417500/104115482-83f03000-52d5-11eb-9b10-17e02e5d011e.png)
+![image](https://user-images.githubusercontent.com/71417500/106669178-e48b2980-6570-11eb-9e6a-cb863482c3b4.png)
 
 ## Link to app on Heroku:
 
