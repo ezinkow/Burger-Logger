@@ -8,7 +8,7 @@ https://shrouded-wildwood-93576.herokuapp.com/
 
 ## About This Project:
 
-This was a homework assignment as part of the Northwestern Coding Bootcamp to build an application where a user can submit a hamburger choice, and the "devour" it by clicking a button.
+This is an application where a user can submit a hamburger choice, and the "devour" it by clicking a button.
 
 This was built with sql, express, node, handlebars, orm, Heroku, Javascript, HTML and CRUD methods.
 
